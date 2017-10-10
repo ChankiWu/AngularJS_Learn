@@ -36,7 +36,7 @@
     });
 </script>-->
 
-<div ng-app="" ng-init="names=[
+<!--<div ng-app="" ng-init="names=[
 {name:'Jani',country:'Norway'},
 {name:'Hege',country:'Sweden'},
 {name:'Kai',country:'Denmark'}]">
@@ -47,7 +47,22 @@
         </li>
     </ul>
 
-</div>
+</div>-->
+
+<body ng-app="myApp">
+
+<w3-test-directive></w3-test-directive>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.directive("w3TestDirective", function() {
+        return {
+            template : "<h1>Made by a directive!</h1>"
+        };
+    });
+</script>
+
+</body>
 
 </body>
 </html>
